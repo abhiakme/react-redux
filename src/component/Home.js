@@ -1,11 +1,15 @@
 import React from 'react'
+import Header from './Header';
 
-const Home = () => {
+const Home = (props) => {
+  console.warn("home", props.data);
   return (
     <div>
-      <div className="add-to-cart">
+      {/* <div className="add-to-cart">
+      <span>{props.data.length}</span>
         <img src="https://static.vecteezy.com/system/resources/previews/004/999/463/non_2x/shopping-cart-icon-illustration-free-vector.jpg" />
-      </div>
+      </div> */}
+      {/* <Header data={props.data}/> */}
       <h1>Home</h1>
       <div className="cart-wrapper">
         <div className="img-wrapper item">
@@ -16,7 +20,12 @@ const Home = () => {
           <span>Price: Rs 1200.00</span>
         </div>
         <div className="btn-wrapper item">
-          <button>Add To Cart</button>
+          <button onClick={() => 
+          props.addToCartHandler({price:1200,name:"nokia"})
+          }>Add To Cart</button>
+          <button onClick={() => 
+          props.removeToCartHandler()
+          }>Remove From Cart</button>
         </div>
       </div>
     </div>

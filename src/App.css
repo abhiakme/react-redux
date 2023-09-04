@@ -66,8 +66,21 @@
   right: 1%;
   top: 1%;
 }
-
-
+.add-to-cart span{
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  position: absolute;
+  right: 45px;
+  top:8px;
+  z-index: 1;
+  color:#fff;
+  font-size: 1.1em;
+  font-weight: 500;
+  background-color: red;
+  border-radius: 50%;
+}
+/*  */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
